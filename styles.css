@@ -9,6 +9,7 @@ html, body {
     flex-direction: column;
     background-color: rgb(15, 15, 15);
     color: azure;
+    font-family: 'Outfit';
 }
 
 #footer {
