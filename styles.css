@@ -14,7 +14,7 @@ html, body {
 #footer {
     position: absolute;
     height: 40px;
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: center;
     position: relative;
@@ -38,7 +38,7 @@ html, body {
 #nav {
 
     height: 40px;
-    width: 80%;
+    width: 90%;
     max-width: 600px;
     margin-top: 80px;
     margin-bottom: 20px;
@@ -69,7 +69,7 @@ html, body {
 
 #content {
     height: auto;
-    width: 80%;
+    width: 90%;
     max-width: 600px;
     position: relative;
 }
