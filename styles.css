@@ -1,0 +1,200 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(15, 15, 15);
+    color: azure;
+}
+
+#footer {
+    position: absolute;
+    height: 40px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-right: 0;
+    top: 10px;
+    opacity: 0.6;
+}
+
+#sneak-peek{
+    position: absolute;
+    width: 230px; 
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    border: solid rgb(22, 22, 22) 2px;
+}
+
+#nav {
+
+    height: 40px;
+    width: 80%;
+    max-width: 600px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: right;
+    position: relative;
+    padding-right: 20px;
+}
+
+#sort-btn {
+    width: 120px; 
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: solid rgb(22, 22, 22) 2px;
+    color: darkgray;
+}
+
+#sort-btn:hover {
+    background-color: rgb(22, 22, 22);
+    color: white;
+}
+
+#content {
+    height: auto;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.content1, .content2 {
+    width: 75%;
+    opacity: 1;
+    overflow: hidden;
+    transition: opacity 0.5s ease;
+}
+
+.content2 {
+    display: none;
+    opacity: 0;
+}
+
+/* Initial state of content1 and content2 */
+#toggle-btn:not(:checked) ~ #content .content2 {
+    opacity: 1;
+    display: block;
+}
+
+#toggle-btn:not(:checked) ~ #content .content1 {
+    opacity: 0;
+    display: none;
+}
+
+/* State when toggle button is checked */
+#toggle-btn:checked ~ #content .content2 {
+    opacity: 0;
+    display: none;
+}
+
+#toggle-btn:checked ~ #content .content1 {
+    opacity: 1;
+    display: block;
+}
+
+input{display: none;}
+
+.table,
+.table2 {
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    color: rgb(133, 133, 133);
+    line-height: 2;
+}
+
+
+#content{
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), red, orange, yellow); /* Replace with your desired gradient */
+    border-image-slice: 1; /* Ensures the gradient covers the entire border */
+}
+
+
+
+.label{
+    background-color: rgb(22, 22, 22); 
+    width: 120px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid rgb(22, 22, 22) 2px;
+    height: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    }
+
+
+
+/* Initial state of label */
+.label::after {
+    content: "posts";
+}
+
+/* Change label text when toggle button is checked */
+#toggle-btn:checked ~ #nav #sort-btn + .label::after {
+    content: "lyrics";
+}
+
+/* Hide the checkbox visually */
+#toggle-btn {
+    display: none;
+}
+
+.title{width: 100%; padding-left: 20px;}
+
+span.white{color: white;}
+span.dark{color: rgb(80, 80, 80);}
+span.red{color: rgb(156, 0, 0);}
+
+.img{
+    width: 144px;
+    height: 144px;
+    background-color: black;
+    position: absolute;
+    right: 20px;
+    border-radius: 4px;
+    background-size: contain;
+}
+
+.img.one{background-image: url('61\ 8.045.jpg');}
+.img.two{background-image: url('18\ 3.020.jpg');}
+.img.three{background-image: url('34\ 5.011.jpg');}
+.img.four{background-image: url('1\ 9.014.jpg');}
+.img.five{background-image: url('5\ 2.001.jpg');}
+.img.six{background-image: url('16\ 6.038.jpg');}
+
+span.op9 { opacity: 0.9; }
+span.op8 { opacity: 0.8; }
+span.op7 { opacity: 0.7; }
+span.op6 { opacity: 0.6; }
+span.op5 { opacity: 0.5; }
+span.op4 { opacity: 0.4; }
+span.op3 { opacity: 0.3; }
+span.op2 { opacity: 0.2; }
+span.op1 { opacity: 0.1; }
